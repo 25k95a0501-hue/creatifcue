@@ -11,7 +11,7 @@ export function Hero() {
             <span className="label">Creative × Digital × AI Studio</span>
           </Reveal>
           <Reveal delay={80}>
-            <h1 className="display mt-7 text-[clamp(3rem,12vw,8.5rem)]">
+            <h1 className="display mt-7 text-[clamp(2.6rem,8.8vw,6.8rem)]">
               We build
               <br />
               brands
@@ -80,7 +80,7 @@ export function Hero() {
       </div>
 
       {/* Floating service bar */}
-      <Reveal delay={260} className="relative z-10 mt-10 lg:-mt-8">
+      <Reveal delay={260} className="relative z-10 mt-14 sm:mt-16">
         <div className="mx-auto max-w-4xl overflow-hidden rounded-full border border-border bg-background/90 backdrop-blur-md">
           <div className="flex items-center gap-1 overflow-x-auto px-2 py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {heroFilters.map((f) => (
