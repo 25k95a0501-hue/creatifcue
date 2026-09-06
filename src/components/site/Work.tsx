@@ -25,7 +25,7 @@ export function Work() {
   return (
     <section id="work" className="shell py-24 sm:py-32 lg:py-40">
       <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
-        <Reveal className="lg:col-span-7">
+        <Reveal className="min-w-0 lg:col-span-7">
           <span className="label">Selected work</span>
           <h2 className="display mt-6 text-[clamp(2.5rem,8vw,6rem)]">
             A few things
@@ -34,7 +34,7 @@ export function Work() {
           </h2>
         </Reveal>
 
-        <Reveal delay={80} className="lg:col-span-5">
+        <Reveal delay={80} className="min-w-0 lg:col-span-5">
           <div className="-mx-5 flex gap-2 overflow-x-auto px-5 pb-1 lg:mx-0 lg:flex-wrap lg:justify-end lg:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {workFilters.map((f) => (
               <button
