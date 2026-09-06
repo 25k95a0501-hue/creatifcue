@@ -23,7 +23,7 @@ export const images = {
 };
 
 export const site = {
-  name: "OBLIQUE",
+  name: "CREATIF-CUE",
   tagline: "CREATIVE × DIGITAL × AI",
   // Replace these placeholders with your real details.
   email: "hello@youragency.com",
