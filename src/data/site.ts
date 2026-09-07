@@ -37,6 +37,7 @@ export const nav = [
   { label: "Work", href: "#work" },
   { label: "Studio", href: "#studio" },
   { label: "About", href: "#about" },
+  { label: "Portfolio", href: "/portfolio" },
 ];
 
 export const heroFilters = ["BRANDING", "SOCIAL", "WEB", "AI", "PRINT"];
