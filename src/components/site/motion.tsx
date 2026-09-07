@@ -246,3 +246,56 @@ export function CustomCursor() {
     </div>
   );
 }
+
+/* ---------------- Masked line reveal (for rich JSX lines) ---------------- */
+
+export function MaskLines({
+  lines,
+  className,
+  delay = 0,
+  stagger = 110,
+}: {
+  lines: ReactNode[];
+  className?: string;
+  delay?: number;
+  stagger?: number;
+}) {
+  const ref = useRef<HTMLSpanElement | null>(null);
+  const [shown, setShown] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (prefersReduced()) {
+      setShown(true);
+      return;
+    }
+    const io = new IntersectionObserver(
+      ([e]) => {
+        if (e?.isIntersecting) {
+          setShown(true);
+          io.disconnect();
+        }
+      },
+      { threshold: 0.15 },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  return (
+    <span ref={ref} className={cn("block", className)}>
+      {lines.map((line, i) => (
+        <span key={i} className="block overflow-hidden pb-[0.04em]">
+          <span
+            className="word-rise block"
+            data-in={shown ? "true" : "false"}
+            style={{ transitionDelay: `${delay + i * stagger}ms` }}
+          >
+            {line}
+          </span>
+        </span>
+      ))}
+    </span>
+  );
+}
