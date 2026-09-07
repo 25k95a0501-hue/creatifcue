@@ -43,7 +43,7 @@ export function Hero() {
             <Reveal className="media aspect-[4/5] w-full sm:aspect-[5/6]">
               <img
                 src={images.heroMain}
-                alt="Editorial art direction still life of folded printed posters and a terracotta arch form"
+                alt="Editorial art direction still life of folded printed posters and a blue arch form"
                 width={1408}
                 height={1712}
                 fetchPriority="high"
