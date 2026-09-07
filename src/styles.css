@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * OBLIQUE — editorial creative studio design system.
- * Warm ivory ground, near-black ink, single terracotta accent.
+ * CREATIF-CUE — editorial creative studio design system.
+ * Warm ivory ground, near-black ink, single blue accent.
  * Type: Archivo (grotesk) + Instrument Serif (editorial italic accents).
  */
 
@@ -66,14 +66,14 @@
   --secondary-foreground: var(--ink);
   --muted: var(--sand);
   --muted-foreground: oklch(0.52 0.012 70);
-  --accent: oklch(0.585 0.128 42);
+  --accent: #1239f7;
   --accent-foreground: oklch(0.98 0.008 85);
   --destructive: oklch(0.55 0.19 27);
   --destructive-foreground: oklch(0.98 0.008 85);
   --hairline: oklch(0.885 0.012 78);
   --border: var(--hairline);
   --input: var(--hairline);
-  --ring: oklch(0.585 0.128 42);
+  --ring: #1239f7;
 }
 
 @layer base {
