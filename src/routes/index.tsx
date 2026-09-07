@@ -32,8 +32,9 @@ export const Route = createFileRoute("/")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "CreativeWorkSeries",
-          name: "OBLIQUE",
+          "@type": "Organization",
+          name: "CREATIF-CUE",
+          url: "https://creatifcue.lovable.app/",
           description,
         }),
       },
