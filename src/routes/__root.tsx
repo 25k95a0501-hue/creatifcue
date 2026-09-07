@@ -77,9 +77,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "OBLIQUE — Creative, Digital & AI Studio" },
-      { name: "description", content: "Independent creative studio for brand, digital and AI-powered work." },
-      { property: "og:site_name", content: "OBLIQUE" },
+      { title: "CREATIF-CUE — Creative, Digital & AI Studio" },
+      { name: "description", content: "CREATIF-CUE is an independent studio for brand, digital and AI-powered creative work." },
+      { property: "og:site_name", content: "CREATIF-CUE" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
