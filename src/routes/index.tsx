@@ -10,9 +10,9 @@ import { Process } from "@/components/site/Process";
 import { ContactForm } from "@/components/site/ContactForm";
 import { Footer } from "@/components/site/Footer";
 
-const title = "OBLIQUE — Creative, Digital & AI Studio";
+const title = "CREATIF-CUE — Creative, Digital & AI Studio";
 const description =
-  "Independent creative studio building brand identities, websites, social systems and AI-powered visuals for brands that want to stand out.";
+  "CREATIF-CUE is an independent studio building brand identities, websites, social systems and AI-powered visuals for brands that want to stand out.";
 
 export const Route = createFileRoute("/")({
   component: Index,
