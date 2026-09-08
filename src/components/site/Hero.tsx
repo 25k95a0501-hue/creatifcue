@@ -1,5 +1,6 @@
 import { heroFilters, images } from "@/data/site";
 import { ActionButton, Arrow, Reveal } from "./primitives";
+import { MaskLines, Parallax } from "./motion";
 
 export function Hero() {
   return (
@@ -10,17 +11,19 @@ export function Hero() {
           <Reveal>
             <span className="label">Creative × Digital × AI Studio</span>
           </Reveal>
-          <Reveal delay={80}>
-            <h1 className="display mt-7 text-[clamp(2.6rem,8.8vw,6.8rem)]">
-              We build
-              <br />
-              brands
-              <br />
-              <span className="italic-serif text-accent">people</span>
-              <br />
-              remember.
-            </h1>
-          </Reveal>
+          <h1 className="display mt-7 text-[clamp(2.4rem,7vw,5.6rem)]">
+            <MaskLines
+              delay={120}
+              lines={[
+                "We build",
+                "brands",
+                <span key="people" className="italic-serif text-accent">
+                  people
+                </span>,
+                "remember.",
+              ]}
+            />
+          </h1>
           <Reveal delay={160}>
             <p className="mt-9 max-w-[46ch] text-base leading-relaxed text-muted-foreground sm:text-lg">
               We build identities, digital experiences and content systems for brands that want to stand out in a
@@ -40,15 +43,17 @@ export function Hero() {
         {/* Image composition */}
         <div className="lg:col-span-5">
           <div className="relative">
-            <Reveal className="media aspect-[4/5] w-full sm:aspect-[5/6]">
-              <img
-                src={images.heroMain}
-                alt="Editorial art direction still life of folded printed posters and a blue arch form"
-                width={1408}
-                height={1712}
-                fetchPriority="high"
-              />
-            </Reveal>
+            <Parallax speed={0.1}>
+              <Reveal className="media aspect-[4/5] w-full sm:aspect-[5/6]">
+                <img
+                  src={images.heroMain}
+                  alt="Editorial art direction still life of folded printed posters and a blue arch form"
+                  width={1408}
+                  height={1712}
+                  fetchPriority="high"
+                />
+              </Reveal>
+            </Parallax>
 
             <Reveal
               delay={140}
