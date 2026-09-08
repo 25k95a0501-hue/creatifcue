@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { Magnetic } from "./motion";
 
 /** Fade + rise on first scroll into view. */
 export function Reveal({
@@ -84,15 +85,19 @@ export function ActionButton({ children, href, type = "button", variant = "solid
 
   if (href) {
     return (
-      <a href={href} className={cn(base, styles, className)}>
-        {content}
-      </a>
+      <Magnetic>
+        <a href={href} className={cn(base, styles, className)}>
+          {content}
+        </a>
+      </Magnetic>
     );
   }
   return (
-    <button type={type} className={cn(base, styles, className)}>
-      {content}
-    </button>
+    <Magnetic>
+      <button type={type} className={cn(base, styles, className)}>
+        {content}
+      </button>
+    </Magnetic>
   );
 }
 
