@@ -43,15 +43,17 @@ export function Hero() {
         {/* Image composition */}
         <div className="lg:col-span-5">
           <div className="relative">
-            <Reveal className="media aspect-[4/5] w-full sm:aspect-[5/6]">
-              <img
-                src={images.heroMain}
-                alt="Editorial art direction still life of folded printed posters and a blue arch form"
-                width={1408}
-                height={1712}
-                fetchPriority="high"
-              />
-            </Reveal>
+            <Parallax speed={0.1}>
+              <Reveal className="media aspect-[4/5] w-full sm:aspect-[5/6]">
+                <img
+                  src={images.heroMain}
+                  alt="Editorial art direction still life of folded printed posters and a blue arch form"
+                  width={1408}
+                  height={1712}
+                  fetchPriority="high"
+                />
+              </Reveal>
+            </Parallax>
 
             <Reveal
               delay={140}
