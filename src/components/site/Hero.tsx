@@ -11,17 +11,19 @@ export function Hero() {
           <Reveal>
             <span className="label">Creative × Digital × AI Studio</span>
           </Reveal>
-          <Reveal delay={80}>
-            <h1 className="display mt-7 text-[clamp(2.6rem,8.8vw,6.8rem)]">
-              We build
-              <br />
-              brands
-              <br />
-              <span className="italic-serif text-accent">people</span>
-              <br />
-              remember.
-            </h1>
-          </Reveal>
+          <h1 className="display mt-7 text-[clamp(2.6rem,8.8vw,6.8rem)]">
+            <MaskLines
+              delay={120}
+              lines={[
+                "We build",
+                "brands",
+                <span key="people" className="italic-serif text-accent">
+                  people
+                </span>,
+                "remember.",
+              ]}
+            />
+          </h1>
           <Reveal delay={160}>
             <p className="mt-9 max-w-[46ch] text-base leading-relaxed text-muted-foreground sm:text-lg">
               We build identities, digital experiences and content systems for brands that want to stand out in a

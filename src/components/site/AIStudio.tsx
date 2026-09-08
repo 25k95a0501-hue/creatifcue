@@ -1,5 +1,6 @@
 import { aiGallery } from "@/data/site";
 import { Reveal } from "./primitives";
+import { Parallax } from "./motion";
 
 export function AIStudio() {
   return (
@@ -27,9 +28,11 @@ export function AIStudio() {
               key={item.caption}
               className={`w-[76vw] shrink-0 sm:w-[46vw] lg:w-[32vw] ${i % 2 === 1 ? "lg:mt-14" : ""}`}
             >
-              <div className={`media ${i % 2 === 1 ? "aspect-[4/3]" : "aspect-[3/4]"}`}>
-                <img src={item.image} alt={item.alt} loading="lazy" />
-              </div>
+              <Parallax speed={i % 2 === 1 ? 0.08 : 0.14}>
+                <div className={`media ${i % 2 === 1 ? "aspect-[4/3]" : "aspect-[3/4]"}`}>
+                  <img src={item.image} alt={item.alt} loading="lazy" />
+                </div>
+              </Parallax>
               <figcaption className="label mt-4">{item.caption}</figcaption>
             </figure>
           ))}
