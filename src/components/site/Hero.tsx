@@ -11,7 +11,7 @@ export function Hero() {
           <Reveal>
             <span className="label">Creative × Digital × AI Studio</span>
           </Reveal>
-          <h1 className="display mt-7 text-[clamp(2.6rem,8.8vw,6.8rem)]">
+          <h1 className="display mt-7 text-[clamp(2.4rem,7vw,5.6rem)]">
             <MaskLines
               delay={120}
               lines={[
