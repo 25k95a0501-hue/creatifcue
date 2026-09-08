@@ -1,5 +1,6 @@
 import { heroFilters, images } from "@/data/site";
 import { ActionButton, Arrow, Reveal } from "./primitives";
+import { MaskLines, Parallax } from "./motion";
 
 export function Hero() {
   return (
