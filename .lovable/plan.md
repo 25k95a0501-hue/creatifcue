@@ -1,24 +1,28 @@
-# Add Behance portfolio to the portfolio page
+# Add Behance portfolio embed to the portfolio page
 
 ## Goal
-Replace the current placeholder project cards on `/portfolio` with a clean link-out to the user's main Behance profile, keeping the existing editorial minimal design and category filter.
+Display the user's Behance portfolio on the `/portfolio` page using Behance's official embedded project iframe, while keeping the page's premium editorial aesthetic.
+
+## Provided asset
+- Behance embed code:
+  ```html
+  <iframe src="https://www.behance.net/embed/project/255043449?ilo0=1" height="316" width="404" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
+  ```
 
 ## What will change
-1. **Data source**: Add a `behanceUrl` field to the agency config in `src/data/site.ts`.
-2. **Portfolio page (`src/routes/portfolio.tsx`)**:
-   - Keep the category filters (All / Branding / Social / Web / AI / Print) and responsive grid.
-   - Replace the placeholder `projects` array with one featured Behance card that links to the main profile.
-   - The card uses the existing rounded media frame, hover arrow, and reveal animation.
-3. **Home work section (`src/components/site/Work.tsx`)**:
-   - Update the selected-work grid so the single featured item also links out to Behance instead of `#contact`.
-4. **SEO/UX**: Open Behance links in a new tab with `rel="noopener noreferrer"` and clear accessibility labels.
-5. **No backend**: The form and other sections remain unchanged; no CMS or auth needed.
+1. **Portfolio page (`src/routes/portfolio.tsx`)**:
+   - Replace the placeholder project grid with a clean, responsive Behance embed.
+   - Wrap the iframe in a rounded, bordered media frame that matches the site's design tokens.
+   - Keep the page header, category filter pills (visually or functionally), and bottom CTA.
+   - Add a text link below the embed: "Open on Behance" pointing to `https://www.behance.net/gallery/255043449/portfolio` with `target="_blank" rel="noopener noreferrer"`.
+2. **Home work section (`src/components/site/Work.tsx`)**:
+   - Update the featured project card to link to `/portfolio` or directly to the Behance gallery.
+3. **Data (`src/data/site.ts`)**:
+   - Store the Behance gallery URL and embed URL for easy editing.
+4. **Responsive & accessibility**:
+   - Make the iframe scale to full width on mobile and a contained max-width on desktop.
+   - Add `title` attribute to the iframe for screen readers.
+   - Preserve reduced-motion and focus styles.
 
-## Required from the user
-- Paste the main Behance profile URL (e.g. `https://www.behance.net/username`).
-- Optionally provide a title/label for the featured card (default: "View full portfolio on Behance").
-
-## Technical notes
-- Tailwind v4 semantic tokens only; no hardcoded colors.
-- Keep reduced-motion and touch-device fallbacks already in place.
-- Update `src/routes/sitemap[.]xml.ts` if the Behance link should be surfaced in metadata; otherwise no sitemap change needed.
+## No backend changes
+Form, navigation, and other sections stay exactly as they are.
