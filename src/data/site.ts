@@ -30,6 +30,8 @@ export const site = {
   whatsapp: "+91 00000 00000",
   instagram: "@youragency",
   linkedin: "/company/youragency",
+  behanceUrl: "https://www.behance.net/gallery/255043449/portfolio",
+  behanceEmbedUrl: "https://www.behance.net/embed/project/255043449?ilo0=1",
 };
 
 export const nav = [
@@ -137,53 +139,20 @@ export type Project = {
   alt: string;
   /** layout weight in the editorial grid */
   size: "large" | "medium" | "small";
+  /** external case-study link, e.g. Behance */
+  url?: string;
 };
 
 export const projects: Project[] = [
   {
     id: "p1",
-    name: "Project 01",
+    name: "Selected Work",
     category: "BRANDING",
     year: "2026",
     image: workBrand,
-    alt: "Placeholder branding project — replace with your own case imagery",
+    alt: "Selected creative work across branding, digital, social, AI and print",
     size: "large",
-  },
-  {
-    id: "p2",
-    name: "Project 02",
-    category: "WEB",
-    year: "2025",
-    image: workWeb,
-    alt: "Placeholder digital experience project — replace with your own case imagery",
-    size: "medium",
-  },
-  {
-    id: "p3",
-    name: "Project 03",
-    category: "SOCIAL",
-    year: "2025",
-    image: workSocial,
-    alt: "Placeholder social campaign project — replace with your own case imagery",
-    size: "medium",
-  },
-  {
-    id: "p4",
-    name: "Project 04",
-    category: "AI",
-    year: "2026",
-    image: workAi,
-    alt: "Placeholder AI creative project — replace with your own case imagery",
-    size: "small",
-  },
-  {
-    id: "p5",
-    name: "Project 05",
-    category: "PRINT",
-    year: "2025",
-    image: workPrint,
-    alt: "Placeholder print and packaging project — replace with your own case imagery",
-    size: "large",
+    url: "https://www.behance.net/gallery/255043449/portfolio",
   },
 ];
 

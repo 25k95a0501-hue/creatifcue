@@ -64,7 +64,13 @@ export function Work() {
             delay={(i % 3) * 60}
             className={cn(spans[p.size], i % 3 === 1 && "lg:mt-24", i % 3 === 2 && "lg:mt-10 lg:col-start-8")}
           >
-            <a href="#contact" className="group block" aria-label={`${p.name} — ${p.category}`}>
+            <a
+              href={p.url ?? "/portfolio"}
+              target={p.url ? "_blank" : undefined}
+              rel={p.url ? "noopener noreferrer" : undefined}
+              className="group block"
+              aria-label={`${p.name} — ${p.category}`}
+            >
               <div className={cn("media", ratios[p.size])}>
                 <img src={p.image} alt={p.alt} loading="lazy" />
               </div>
