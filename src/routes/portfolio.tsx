@@ -26,14 +26,13 @@ export const Route = createFileRoute("/portfolio")({
 
 function BehanceEmbed() {
   return (
-    <div className="media relative w-full overflow-hidden rounded-2xl border border-border bg-muted">
+    <div className="media relative aspect-[4/3] w-full overflow-hidden sm:aspect-[16/10]">
       <iframe
         src={site.behanceEmbedUrl}
         title="CREATIF-CUE portfolio on Behance"
-        className="absolute inset-0 h-full w-full"
+        className="absolute inset-0 h-full w-full border-0"
         allowFullScreen
         loading="lazy"
-        frameBorder={0}
         allow="clipboard-write"
         referrerPolicy="strict-origin-when-cross-origin"
       />
@@ -61,9 +60,7 @@ function PortfolioPage() {
 
         <Reveal delay={80} className="mt-14 sm:mt-20">
           <div className="mx-auto max-w-5xl">
-            <div className="relative aspect-[4/3] w-full sm:aspect-[16/10]">
-              <BehanceEmbed />
-            </div>
+            <BehanceEmbed />
             <div className="mt-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
               <p className="text-sm text-muted-foreground">
                 Embedded from Behance — best viewed in a modern browser.
